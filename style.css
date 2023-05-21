@@ -1,0 +1,46 @@
+*{
+    outline: 2px solid red;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-rows: 1 fr 1fr 1fr 1fr; */
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "header header header"
+    "section-1 section-1 aside"
+    "section-2 section-2 aside"
+    "footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    text-align:center;
+}
+
+.section-1 {
+    grid-area: section-1;
+}
+
+.section-2 {
+    grid-area: section-2;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "article-1"
+    "article-2"
+    "article-3";
+}
